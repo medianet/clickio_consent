@@ -1,5 +1,5 @@
 {
-	"name": "sabay/clickio-consent",
+	"name": "sabay/clickio_consent",
 	"type": "typo3-cms-extension",
 	"description": "The fastest way to activate Clickio Consent in Drupal. Comply with GDPR, TCF and Consent Mode in minutes.",
 	"keywords": ["advertisements","ads","ad","consent","cmp","clickio","publishers","drupal", "gdpr", "tcf"	],
@@ -20,7 +20,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "clickio-consent"
+			"extension-key": "clickio_consent"
 		}
 	}
 }
