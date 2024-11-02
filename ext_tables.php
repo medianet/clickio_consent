@@ -2,7 +2,6 @@
 
 defined('TYPO3') or die('Access denied.');
 
-if (TYPO3_MODE === 'BE') {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
         'Clickio.ClickioConsent', // Укажите ваш namespace и ключ расширения
         'system', // Выберите раздел, например, "system" или "user"
@@ -17,4 +16,3 @@ if (TYPO3_MODE === 'BE') {
             'labels' => 'LLL:EXT:extension_key/Resources/Private/Language/locallang_mod.xlf', // Локализация
         ]
     );
-}
