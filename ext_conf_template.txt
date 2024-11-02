@@ -2,7 +2,7 @@
 # Extension Configuration template
 #
 
-# cat=Basic; type=string; label=Clickio Site ID: Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.
+# cat=Basic; type=int; label=Clickio Site ID: Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.
 site_id =
 
 # cat=Basic; type=boolean; label=Enable Consent Mode support: Allows this GTM template to automatically set <strong>default</strong> consent states and <strong>update</strong> consent states based on previous decisions made through Clickio CMP. This option functions correctly only when the 'Consent Mode support' feature is activated in the Clickio Consent settings UI. Ensure this feature is enabled to properly synchronize consent management across your site. <a href="https://docs.clickio.com/link/427" target="_blank">Read more</a>
@@ -11,7 +11,7 @@ consent_enabled =
 # cat=Basic; type=options[Eu=eu,All=all]; label=Consent Scope: This setting defines the scope of default consent configurations. Choose <strong>'Only EEA, UK and CH users'</strong> to apply strict <strong>'denied'</strong> defaults only to users in the EEA, UK and CH, while users in other regions will have a general default of <strong>'granted'</strong>. Select <strong>'All users (global)'</strong> to apply <strong>'denied'</strong> defaults universally. Make sure this setting matches the equivalent setting in the Clickio CMP interface to avoid any conflicts.
 scope = value1
 
-# cat=Basic; type=string; label=Wait for update (ms): This setting determines how long, in milliseconds, the Google tags should wait before attempting to update the user's consent state. This delay provides a buffer to ensure that any necessary consent changes are effectively captured, helping maintain alignment with user preferences.
+# cat=Basic; type=int; label=Wait for update (ms): This setting determines how long, in milliseconds, the Google tags should wait before attempting to update the user's consent state. This delay provides a buffer to ensure that any necessary consent changes are effectively captured, helping maintain alignment with user preferences.
 wait= 
 
 # cat=Basic; type=boolean; label=Redact ads data: When ad_storage is denied, ad click identifiers sent in network requests by Google Ads and Floodlight tags will be redacted. <a href="https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced#redact_ads_data" target="_blank">Read more</a>

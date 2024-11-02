@@ -1,0 +1,34 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+    <h1>Настройки модуля</h1>
+    
+    <label for="mainField">Основное поле:</label>
+    <select id="mainField" name="mainField">
+        <option value="show">Показать дополнительное поле</option>
+        <option value="hide">Скрыть дополнительное поле</option>
+    </select>
+
+    <div id="additionalField" style="display: none;">
+        <label for="extra">Дополнительное поле:</label>
+        <input type="text" id="extra" name="extra">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainField = document.getElementById('mainField');
+            const additionalField = document.getElementById('additionalField');
+
+            function toggleAdditionalField() {
+                if (mainField.value === 'show') {
+                    additionalField.style.display = 'block';
+                } else {
+                    additionalField.style.display = 'none';
+                }
+            }
+
+            toggleAdditionalField();
+            mainField.addEventListener('change', toggleAdditionalField);
+        });
+    </script>
+</f:section>
