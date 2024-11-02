@@ -15,7 +15,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"ClickioConsent\\": "Classes/"
+			"Sabay\\ClickioConsent\\": "Classes/"
 		}
 	},
 	"extra": {

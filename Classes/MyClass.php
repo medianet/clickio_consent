@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace sabay\clickio_consent\MyClass;
+namespace Sabay\ClickioConsent\MyClass;
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 
