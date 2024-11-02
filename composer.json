@@ -20,7 +20,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "clickio_consent"
+			"extension-key": "clickio-consent"
 		}
 	}
 }
