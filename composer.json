@@ -1,7 +1,7 @@
 {
     "name": "clickio/clickio-consent",
     "type": "typo3-cms-extension",
-    "description": "The fastest way to activate Clickio Consent in Drupal. Comply with GDPR, TCF and Consent Mode in minutes.",
+    "description": "The fastest way to activate Clickio Consent in Typo3. Comply with GDPR, TCF and Consent Mode in minutes.",
     "homepage": "https://clickio.com",
     "license": ["GPL-2.0-or-later"],
     "keywords": ["TYPO3 CMS"],

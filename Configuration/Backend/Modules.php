@@ -11,8 +11,8 @@ use Clickio\ClickioConsent\Controller\ConfigController;
             'position' => ['after' => '*'],
             'access' => 'user,group',
             'path' => '/module/web/ConsentSetup/',
-            'icon' => 'EXT:news/Resources/Public/Icons/Extension.svg',
-            'labels' => 'LLL:EXT:news/Resources/Private/Language/locallang_modadministration.xlf',
+            'icon' => 'EXT:clickio_consent/Resources/Public/Icons/Extension.svg',
+            'labels' => 'LLL:EXT:clickio_consent/Resources/Private/Language/locallang_consent.xlf',
             'extensionName' => 'ClickioConsent',
             'controllerActions' => [
                 ConfigController::class => [
