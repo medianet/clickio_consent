@@ -1,20 +1,29 @@
 <?php
+
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Clickio consent',
-    'description' => 'Extension description',
-    'category' => 'plugin',
-    'author' => 'Alexander sabaev',
-    'author_email' => 'asabay@gmail.com',
-    'author_company' => 'Clickio',
-    'state' => 'stable',
-    'version' => '1.0.0-dev',
+    'title' => 'Clickio Consent',
+    'description' => 'The fastest way to activate Clickio Consent in Drupal. Comply with GDPR, TCF and Consent Mode in minutes.',
+    'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '13.4.0-12.3.99',
+            'typo3' => '13.4.0-13.4.99',
+            'fluid_styled_content' => '13.4.0-13.4.99',
+            'rte_ckeditor' => '13.4.0-13.4.99',
         ],
         'conflicts' => [
         ],
-        'suggests' => [
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'Clickio\\ClickioConsent\\' => 'Classes',
         ],
     ],
+    'state' => 'stable',
+    'uploadfolder' => 0,
+    'createDirs' => '',
+    'clearCacheOnLoad' => 1,
+    'author' => 'Alexander Sabaev',
+    'author_email' => 'asabay@gmail.com',
+    'author_company' => 'Clickio',
+    'version' => '1.0.0',
 ];
