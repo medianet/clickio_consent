@@ -5,8 +5,14 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ConfigController extends ActionController
 {
-    public function indexAction()
+
+    public function indexAction(): ResponseInterface
     {
-        // ѕередаем нужные параметры в шаблон, если это нужно
+
+        $this->view->assignMultiple([
+            'counts' => 1,
+        ]);
+
+        return $this->htmlResponse($moduleTemplate->renderContent());
     }
 }
