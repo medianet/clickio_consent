@@ -1,5 +1,26 @@
 {
-  "name" "Clickio Consent",
-  "version" : "1.0.0-dev",
-  "type": "typo3-cms-extension"
+	"name": "sabay/clickio-consent",
+	"type": "typo3-cms-extension",
+	"description": "The fastest way to activate Clickio Consent in Drupal. Comply with GDPR, TCF and Consent Mode in minutes.",
+	"keywords": ["advertisements","ads","ad","consent","cmp","clickio","publishers","drupal", "gdpr", "tcf"	],
+	"homepage": "https://www.drupal.org/project/clickioconsent",
+	"license": [ "GPL-2.0-or-later" ],
+	"require": {
+		"ext-dom": "*",
+		"typo3/cms-core": "^13.3",
+		"typo3/cms-seo": "^13.3"
+	},
+	"replace": {
+		"sabay/clickio-consent": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"ClickioConsent\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "clickio_consent"
+		}
+	}
 }
