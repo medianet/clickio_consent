@@ -15,7 +15,7 @@ use Clickio\ClickioConsent\Controller\ConfigController;
             'labels' => 'LLL:EXT:news/Resources/Private/Language/locallang_modadministration.xlf',
             'extensionName' => 'ClickioConsent',
             'controllerActions' => [
-                AdministrationController::class => [
+                ConfigController::class => [
                     'index'
                 ],
             ],
