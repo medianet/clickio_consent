@@ -13,20 +13,5 @@
         <label for="extra">Дополнительное поле:</label>
         <input type="text" id="extra" name="extra">
     </div>
-
-    <script>
-            const mainField = document.getElementById('mainField');
-            const additionalField = document.getElementById('additionalField');
-
-            function toggleAdditionalField() {
-                if (mainField.value === 'show') {
-                    additionalField.style.display = 'block';
-                } else {
-                    additionalField.style.display = 'none';
-                }
-            }
-
-            toggleAdditionalField();
-            mainField.addEventListener('change', toggleAdditionalField);
-    </script>
+    <f:asset.script identifier="main" src="EXT:clickio_consent/Resources/Public/JavaScript/config.js" />
 </f:section>
