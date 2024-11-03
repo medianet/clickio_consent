@@ -1,5 +1,5 @@
 console.log('main ready');
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
             const mainField = document.getElementById('mainField');
             const additionalField = document.getElementById('additionalField');
 
@@ -13,4 +13,4 @@ $(document).ready(function () {
 
             toggleAdditionalField();
             mainField.addEventListener('change', toggleAdditionalField);
-}
+});
