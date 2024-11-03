@@ -7,7 +7,7 @@
 
    {options}
 
-<f:form action="/module/web/ConsentSetup/" method="POST">
+<form action="/module/web/ConsentSetup/" method="POST">
 <p><label for="site_id">Clickio Site ID:</label> <input type="text" id="site_id" name="site_id" value="{site_id}"/> <span onclick="hintShow('site_id')" class="dashicons dashicons-info-outline hi"></span></p>
 <small id="site_id_hint" class="hit">Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.</small>
 <p><label>Enable Consent Mode support: <f:form.checkbox id="consent_enabled" additionalAttributes="{iid: consent_enabled}" name="consent_enabled" value="1" checked="{consent_enabled} == 1" /></label><span onclick="hintShow('consent_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
@@ -32,5 +32,5 @@
 <p><label for="tcf_stab_enabled">Include TCF Stub:</label> <input type="checkbox" id="tcf_stab_enabled" name="tcf_stab_enabled" value="1" {tcf_stab_enabled'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('tcf_stab_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
 <small id="tcf_stab_enabled_hint" class="hit">Installing the TCF stub can improve the reliability of your TCF implementation. In addition, if the "Allow Consent Mode to read TCF signals" setting is enabled, Google tags are able to read specific flags using TCF signals (<a href="https://docs.clickio.com/link/427#bkmrk-5.1.-tcf-mode"  target="_blank">read more<a/>).</small>
 <f:form.submit value="Save"/>
-</f:form>
+</form>
 </f:section>
