@@ -37,7 +37,7 @@ class ConfigController extends ActionController
         $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
 
         $moduleTemplate->assignMultiple($myConfiguration);
-        $moduleTemplate->assignMultiple('options' => print_r($myConfiguration,true));
+        $moduleTemplate->assignMultiple(['options' => print_r($myConfiguration,true)]);
 
         return $moduleTemplate->renderResponse('Config/Index');
 
