@@ -28,8 +28,11 @@ class ConfigController extends ActionController
         $this->extensionConfiguration = $extensionConfiguration;
     }
 
-    public function indexAction(): Response
+    public function indexAction(?array $newSettings = null): Response
     {
+
+        $this->extensionConfiguration->set('clickio_consent', $newSettings);
+        
         $myConfiguration = $this->extensionConfiguration->get('clickio_consent');
         $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
 

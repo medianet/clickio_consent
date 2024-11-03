@@ -6,15 +6,28 @@
 
 
    {options}
-    <label for="mainField">Основное поле:</label>
-    <select id="mainField" name="mainField">
-        <option value="show">Показать дополнительное поле</option>
-        <option value="hide">Скрыть дополнительное поле</option>
-    </select>
 
-    <div id="additionalField" style="display: none;">
-        <label for="extra">Дополнительное поле:</label>
-        <input type="text" id="extra" name="extra">
-    </div>
+<p><label for="site_id">Clickio Site ID:</label> <input type="text" id="site_id" name="site_id" value="{opions['site_id']}"/> <span onclick="hintShow('site_id')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="site_id_hint" class="hit">Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.</small>
+<p><label for="consent_enabled">Enable Consent Mode support:</label> <input type="checkbox" id="consent_enabled" name="consent_enabled" value="1" {options['consent_enabled'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('consent_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="consent_enabled_hint" class="hit">Allows this GTM template to automatically set <strong>default</strong> consent states and <strong>update</strong> consent states based on previous decisions made through Clickio CMP. This option functions correctly only when the 'Consent Mode support' feature is activated in the Clickio Consent settings UI. Ensure this feature is enabled to properly synchronize consent management across your site. <a href="https://docs.clickio.com/link/427" target="_blank">Read more</a></small>
+<div id="consent_enabled_section" {options['consent_enabled'] ?? 0) == 1? '' : 'style="display:none"' }>
+<p>Consent Scope: <span onclick="hintShow('scope')" class="dashicons dashicons-info-outline hi"></span><br/>
+<small id="scope_hint" class="hit">This setting defines the scope of default consent configurations. Choose <strong>'Only EEA, UK and CH users'</strong> to apply strict <strong>'denied'</strong> defaults only to users in the EEA, UK and CH, while users in other regions will have a general default of <strong>'granted'</strong>. Select <strong>'All users (global)'</strong> to apply <strong>'denied'</strong> defaults universally. Make sure this setting matches the equivalent setting in the Clickio CMP interface to avoid any conflicts.</small><br/>
+<input type="radio" name="scope" id="eu" value="eu" {options['scope'] ?? '') == 'eu'? 'checked' : '' }> <label for="eu">Only EEA, UK and CH users" (default)</label><br/>
+<input type="radio" name="scope" id="all" value="all" {options['scope'] ?? '') == 'all'? 'checked' : '' }> <label for="all">All users (global)</label>
+</p>
 
+<p><label for="wait">Wait for update (ms):</label> <input type="text" id="wait" name="wait" value="<?php echo $options['wait'] ?? ''}"/> <span onclick="hintShow('wait')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="wait_hint" class="hit">This setting determines how long, in milliseconds, the Google tags should wait before attempting to update the user's consent state. This delay provides a buffer to ensure that any necessary consent changes are effectively captured, helping maintain alignment with user preferences.</small>
+<p><label for="redact">Redact ads data:</label> <input type="checkbox" id="redact" name="redact" value="1" {options['redact'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('redact')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="redact_hint" class="hit">When ad_storage is denied, ad click identifiers sent in network requests by Google Ads and Floodlight tags will be redacted. <a href="https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced#redact_ads_data" target="_blank">Read more</a></small>
+<p><label for="passthrough">Enable URL passthrough:</label> <input type="checkbox" id="passthrough" name="passthrough" value="1" {options['passthrough'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('passthrough')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="passthrough_hint" class="hit">Pass through ad click, client ID, and session ID information in URLs. <a href="https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced#passthroughs" target="_blank">Read more</a></small>
+</div>
+
+<p><label for="clickio_cmp_enabled">Enable Clickio CMP:</label> <input type="checkbox" id="clickio_cmp_enabled" name="clickio_cmp_enabled" value="1" {options['clickio_cmp_enabled'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('clickio_cmp_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="clickio_cmp_enabled_hint" class="hit">Automatically include Clickio CMP code to the page. Warning! Do not use this option if you have already installed the main code directly. <a href="https://docs.clickio.com/link/426" target="_blank">Read more</a></small>
+<p><label for="tcf_stab_enabled">Include TCF Stub:</label> <input type="checkbox" id="tcf_stab_enabled" name="tcf_stab_enabled" value="1" {options['tcf_stab_enabled'] ?? 0) == 1? 'checked' : '' }> <span onclick="hintShow('tcf_stab_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
+<small id="tcf_stab_enabled_hint" class="hit">Installing the TCF stub can improve the reliability of your TCF implementation. In addition, if the "Allow Consent Mode to read TCF signals" setting is enabled, Google tags are able to read specific flags using TCF signals (<a href="https://docs.clickio.com/link/427#bkmrk-5.1.-tcf-mode"  target="_blank">read more<a/>).</small>
 </f:section>
