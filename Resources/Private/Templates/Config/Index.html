@@ -7,7 +7,7 @@
 
    {options}
 
-<form action="/module/web/ConsentSetup/" method="POST">
+<form action="/typo3/module/web/ConsentSetup/" method="POST">
 <p><label for="site_id">Clickio Site ID:</label> <input type="text" id="site_id" name="site_id" value="{site_id}"/> <span onclick="hintShow('site_id')" class="dashicons dashicons-info-outline hi"></span></p>
 <small id="site_id_hint" class="hit">Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.</small>
 <p><label>Enable Consent Mode support: <f:form.checkbox id="consent_enabled" additionalAttributes="{iid: consent_enabled}" name="consent_enabled" value="1" checked="{consent_enabled} == 1" /></label><span onclick="hintShow('consent_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
