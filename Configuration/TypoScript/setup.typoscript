@@ -1,5 +1,5 @@
 # ==============================================
-# FE-Plugin configuration for EXT:news
+# FE-Plugin configuration for EXT:clickio_consent
 # ==============================================
 plugin.tx_clickio_consent {
 	mvc.callDefaultActionIfActionCantBeResolved = 1
@@ -21,6 +21,7 @@ plugin.tx_clickio_consent {
 		}
 	}
 
+    page = PAGE
     page.includeJSFooter {
         main = EXT:clickio_consent/Resources/Public/JavaScript/main.js
     }
