@@ -30,14 +30,12 @@ class ConfigController extends ActionController
 
     public function indexAction(): Response
     {
-        $myConfiguration = $this->extensionConfiguration
-            ->get('clickio_consent');
+        $myConfiguration = $this->extensionConfiguration->get('clickio_consent');
+        $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
 
-
-        $this->view->assignMultiple([
+        $moduleTemplate->assignMultiple([
             'options' => $myConfiguration,
         ]);
-        $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
         return $moduleTemplate->renderResponse('Config/Index');
 
         // return $this->htmlResponse();
