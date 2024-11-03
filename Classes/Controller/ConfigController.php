@@ -16,7 +16,7 @@ class ConfigController extends ActionController
     protected $moduleTemplateFactory;
 
     /** @var ExtensionConfiguration */
-    protected $extensionConfiguration
+    protected $extensionConfiguration;
 
     public function injectModuleTemplateFactory(ModuleTemplateFactory $moduleTemplateFactory)
     {
