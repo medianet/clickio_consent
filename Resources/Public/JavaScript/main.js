@@ -11,17 +11,16 @@ function hintShow(id){
 
 
 document.addEventListener('DOMContentLoaded', function () {
-            const mainField = document.getElementById('mainField');
-            const additionalField = document.getElementById('additionalField');
-
-            function toggleAdditionalField() {
-                if (mainField.value === 'show') {
-                    additionalField.style.display = 'block';
+           const consent_enabled = document.getElementById('consent_enabled');
+           function toggleAdditionalField() {
+               const consent_enabled_section = document.getElementById('consent_enabled_section');
+                if (event.currentTarget.checked) {
+                     consent_enabled_section.style.display="block";
                 } else {
-                    additionalField.style.display = 'none';
+                     consent_enabled_section.style.display="none";
                 }
-            }
+           }
 
             toggleAdditionalField();
-            mainField.addEventListener('change', toggleAdditionalField);
+            consent_enabled.addEventListener('change', toggleAdditionalField);
 });
