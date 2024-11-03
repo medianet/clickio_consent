@@ -26,5 +26,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Alexander Sabaev',
     'author_email' => 'asabay@gmail.com',
     'author_company' => 'Clickio',
-    'version' => '1.1.7',
+    'version' => '1.1.11',
 ];
