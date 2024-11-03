@@ -12,7 +12,6 @@ class ConfigController extends ActionController
         $this->view->assignMultiple([
             'counts' => 1,
         ]);
-
-        return $this->htmlResponse($moduleTemplate->renderContent());
+        return $this->htmlResponse();
     }
 }

@@ -1,0 +1,24 @@
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+plugin.tx_clickio_consent {
+	mvc.callDefaultActionIfActionCantBeResolved = 1
+
+	view {
+		templateRootPaths {
+			0 = EXT:clickio_consent/Resources/Private/Templates/
+			1 = {$plugin.tx_clickio_consent.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = EXT:clickio_consent/Resources/Private/Partials/
+			1 = {$plugin.tx_clickio_consent.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = EXT:clickio_consent/Resources/Private/Layouts/
+			1 = {$plugin.tx_clickio_consent.view.layoutRootPath}
+		}
+	}
+
+}
