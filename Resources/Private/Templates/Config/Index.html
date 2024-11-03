@@ -14,8 +14,8 @@
 <div id="consent_enabled_section" {consent_enabled} style="display:none">
 <p>Consent Scope: <span onclick="hintShow('scope')" class="dashicons dashicons-info-outline hi"></span><br/>
 <small id="scope_hint" class="hit">This setting defines the scope of default consent configurations. Choose <strong>'Only EEA, UK and CH users'</strong> to apply strict <strong>'denied'</strong> defaults only to users in the EEA, UK and CH, while users in other regions will have a general default of <strong>'granted'</strong>. Select <strong>'All users (global)'</strong> to apply <strong>'denied'</strong> defaults universally. Make sure this setting matches the equivalent setting in the Clickio CMP interface to avoid any conflicts.</small><br/>
-<input type="radio" name="scope" id="eu" value="eu" {scope'] ?? '') == 'eu'? 'checked' : '' }> <label for="eu">Only EEA, UK and CH users" (default)</label><br/>
-<input type="radio" name="scope" id="all" value="all" {scope'] ?? '') == 'all'? 'checked' : '' }> <label for="all">All users (global)</label>
+<f:form.radio name="scope" value="eu" checked="{scope} == 'eu'" /> <label for="eu">Only EEA, UK and CH users" (default)</label><br/>
+<f:form.radio name="scope" value="all" checked="{scope} == 'all'" /> <label for="all">All users (global)</label>
 </p>
 
 <p><label for="wait">Wait for update (ms):</label> <input type="text" id="wait" name="wait" value="{wait'] ?? ''}"/> <span onclick="hintShow('wait')" class="dashicons dashicons-info-outline hi"></span></p>

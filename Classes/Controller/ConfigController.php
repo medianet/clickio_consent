@@ -36,9 +36,9 @@ class ConfigController extends ActionController
         $myConfiguration = $this->extensionConfiguration->get('clickio_consent');
         $moduleTemplate = $this->moduleTemplateFactory->create($this->request);
 
-        $moduleTemplate->assignMultiple([
-            $myConfiguration
-        ]);
+        $moduleTemplate->assignMultiple($myConfiguration);
+        $moduleTemplate->assignMultiple('options' => print_r($myConfiguration,true));
+
         return $moduleTemplate->renderResponse('Config/Index');
 
         // return $this->htmlResponse();
