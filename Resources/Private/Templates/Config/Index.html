@@ -9,13 +9,13 @@
 
 <p><label for="site_id">Clickio Site ID:</label> <input type="text" id="site_id" name="site_id" value="{site_id}"/> <span onclick="hintShow('site_id')" class="dashicons dashicons-info-outline hi"></span></p>
 <small id="site_id_hint" class="hit">Place your <a href="https://docs.clickio.com/link/427#bkmrk-access-the-template%3A" target="_blank">Site ID from Clickio platform</a>.</small>
-<p><label for="consent_enabled">Enable Consent Mode support:</label> <input type="checkbox" id="consent_enabled" name="consent_enabled" value="1" {consent_enabled}> <span onclick="hintShow('consent_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
+<p><label>Enable Consent Mode support: <f:form.checkbox name="consent_enabled" value="1" checked="{consent_enabled} == 1" /></label><span onclick="hintShow('consent_enabled')" class="dashicons dashicons-info-outline hi"></span></p>
 <small id="consent_enabled_hint" class="hit">Allows this GTM template to automatically set <strong>default</strong> consent states and <strong>update</strong> consent states based on previous decisions made through Clickio CMP. This option functions correctly only when the 'Consent Mode support' feature is activated in the Clickio Consent settings UI. Ensure this feature is enabled to properly synchronize consent management across your site. <a href="https://docs.clickio.com/link/427" target="_blank">Read more</a></small>
 <div id="consent_enabled_section" {consent_enabled} style="display:none">
 <p>Consent Scope: <span onclick="hintShow('scope')" class="dashicons dashicons-info-outline hi"></span><br/>
 <small id="scope_hint" class="hit">This setting defines the scope of default consent configurations. Choose <strong>'Only EEA, UK and CH users'</strong> to apply strict <strong>'denied'</strong> defaults only to users in the EEA, UK and CH, while users in other regions will have a general default of <strong>'granted'</strong>. Select <strong>'All users (global)'</strong> to apply <strong>'denied'</strong> defaults universally. Make sure this setting matches the equivalent setting in the Clickio CMP interface to avoid any conflicts.</small><br/>
-<f:form.radio name="scope" value="eu" checked="{scope} == 'eu'" /> <label for="eu">Only EEA, UK and CH users" (default)</label><br/>
-<f:form.radio name="scope" value="all" checked="{scope} == 'all'" /> <label for="all">All users (global)</label>
+<label> <f:form.radio name="scope" value="eu" checked="{scope} == 'eu'" /> Only EEA, UK and CH users" (default)</label><br/>
+<label> <f:form.radio name="scope" value="all" checked="{scope} == 'all'" /> All users (global)</label>
 </p>
 
 <p><label for="wait">Wait for update (ms):</label> <input type="text" id="wait" name="wait" value="{wait'] ?? ''}"/> <span onclick="hintShow('wait')" class="dashicons dashicons-info-outline hi"></span></p>
