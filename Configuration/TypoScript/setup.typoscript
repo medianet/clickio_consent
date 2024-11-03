@@ -21,9 +21,9 @@ plugin.tx_clickio_consent {
 		}
 	}
 
-    page = PAGE
-    page.includeJSFooter {
-        main = EXT:clickio_consent/Resources/Public/JavaScript/main.js
-    }
+#    page = PAGE
+#    page.includeJSFooter {
+#        main = EXT:clickio_consent/Resources/Public/JavaScript/main.js
+#    }
 
 }

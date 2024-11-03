@@ -6,7 +6,7 @@ use Clickio\ClickioConsent\Controller\ConfigController;
 //use TYPO3\CMS\Core\Utility\GeneralUtility;
 
     return [
-        'web_consentAdministration' => [
+        'web_clickio_consent' => [
             'parent' => 'web',
             'position' => ['after' => '*'],
             'access' => 'user,group',
