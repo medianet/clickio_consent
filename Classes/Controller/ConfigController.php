@@ -6,7 +6,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 class ConfigController extends ActionController
 {
 
-    public function indexAction(): ResponseInterface
+    public function indexAction(): TYPO3\CMS\Core\Http\Response
     {
 
         $this->view->assignMultiple([
