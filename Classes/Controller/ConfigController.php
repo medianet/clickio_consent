@@ -12,6 +12,15 @@ class ConfigController extends ActionController
 {
 
 
+  protected function initializeIndexAction(): void
+    {
+        if ($this->arguments->hasArgument('newSettings')) {
+            $this->arguments->getArgument('newSettings')->setDataType('array');
+        }
+    }
+
+
+
     /** @var ModuleTemplateFactory */
     protected $moduleTemplateFactory;
 
