@@ -34,8 +34,7 @@ final class ConsentCodeInjector
         }
 
         $options = $this->extensionConfiguration->get('clickio_consent');
-
-        $script = '' . print_r([ $options['scope']??'eu', $this->templates,  $options], true);
+        $script = '';
 
         if( ($options['tcf_stab_enabled']??'') == 1 ){
      		$script .= <<<EOD
