@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
            const els = Array.from(document.querySelectorAll('[data-show]'));
            for(const el of els) {
-             el.addEventListener('change', () => {
-               const id = el.getAttribute("data-show")
+             el.addEventListener('click', () => {
+               const id = el.getAttribute("data-show");
                const ob = document.getElementById(id +'_hint');
                if( ob.style.display !== "block" ){
                     ob.style.display="block";
