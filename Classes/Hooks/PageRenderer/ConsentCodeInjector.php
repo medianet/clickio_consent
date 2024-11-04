@@ -28,7 +28,7 @@ final class TrackingCodeInjector
             // Not a frontend request
             return;
         }
-        $pageRenderer->addHeaderData('<script> alert('11111'); </script>');
+        $pageRenderer->addHeaderData('<script> alert("11111"); </script>');
 
     }
 
