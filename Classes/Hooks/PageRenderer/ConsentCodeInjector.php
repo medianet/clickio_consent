@@ -11,7 +11,14 @@ use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Site\Entity\Site;
 
 
-$templates = [
+
+/**
+ * @internal
+ */
+final class ConsentCodeInjector
+{
+
+protected $templates = [
 
 'all' => <<<EOD
 <!-- Default Consent Mode config -->
@@ -77,11 +84,6 @@ EOD
 ];
 
 
-/**
- * @internal
- */
-final class ConsentCodeInjector
-{
     public function __construct(
         private readonly EventDispatcherInterface $eventDispatcher,
         private readonly ExtensionConfiguration   $extensionConfiguration,
@@ -100,10 +102,10 @@ final class ConsentCodeInjector
 
         $options = $this->extensionConfiguration->get('clickio_consent');
 
-        $script = '' . print_r($options, true);
+        $script = '' . print_r([ $options['scope']??'eu', $this->templates,  $options], true);
 
         if( ($options['tcf_stab_enabled']??'') == 1 ){
-     		$script .= $templates['tcf'];
+     		$script .= $this->templates['tcf'];
         }
 
         if( ($options['consent_enabled']??'') == 1 && ($options['site_id']??0) > 0 ){
@@ -111,7 +113,7 @@ final class ConsentCodeInjector
                   $options['wait'],
                   $options['redact']?'true':'false',
                   $options['passthrough']?'true':'false'
-             ], $templates[($options['scope']??'eu')] );
+             ], $this->templates[($options['scope']??'eu')] );
         }
 
         if( ($options['clickio_cmp_enabled']??'') == 1 && ($options['site_id']??0) > 0 ){
