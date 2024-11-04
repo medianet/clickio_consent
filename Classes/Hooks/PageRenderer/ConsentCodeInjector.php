@@ -106,7 +106,7 @@ final class ConsentCodeInjector
         }
 
         if( ($options['consent_enabled']??'') == 1 && ($options['site_id']??0) > 0 ){
-            $script . = str_replace( ['#wait#','#redact#','#passthrough#'], [
+            $script .= str_replace( ['#wait#','#redact#','#passthrough#'], [
                   $options['wait'],
                   $options['redact']?'true':'false',
                   $options['passthrough']?'true':'false'
