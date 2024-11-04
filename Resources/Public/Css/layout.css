@@ -1,0 +1,16 @@
+.hi {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.dashicons-info-outline:before {
+    content: "\f14c";
+}
+
+.hi{
+    vertical-align: middle;
+    cursor: pointer;
+}
+.hit{
+   display:none;
+}
