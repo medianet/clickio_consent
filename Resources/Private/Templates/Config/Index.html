@@ -1,6 +1,7 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
+<div style="padding:24px">
 <f:form action="index" method="POST" objectname="newSettings" object="{newSettings}">
 <p><label for="site_id">Clickio Site ID:</label> 
 <f:form.textfield id="site_id" name="newSettings[site_id]" value="{newSettings.site_id}" /><span data-show="site_id" class="dashicons dashicons-info-outline hi"></span></p>
@@ -28,4 +29,5 @@
 <small id="tcf_stab_enabled_hint" class="hit">Installing the TCF stub can improve the reliability of your TCF implementation. In addition, if the "Allow Consent Mode to read TCF signals" setting is enabled, Google tags are able to read specific flags using TCF signals (<a href="https://docs.clickio.com/link/427#bkmrk-5.1.-tcf-mode"  target="_blank">read more<a/>).</small>
 <f:form.submit value="Save"/>
 </f:form>
+</div>
 </f:section>

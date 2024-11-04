@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
            const consent_enabled = document.getElementById('consent_enabled');
            function toggleAdditionalField() {
                const consent_enabled_section = document.getElementById('consent_enabled_section');
-                if (event.currentTarget.checked) {
+                if (consent_enabled.checked) {
                      consent_enabled_section.style.display="block";
                 } else {
                      consent_enabled_section.style.display="none";
