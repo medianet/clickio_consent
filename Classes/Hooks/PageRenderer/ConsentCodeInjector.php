@@ -98,8 +98,9 @@ final class ConsentCodeInjector
             return;
         }
 
-        $script = '';
         $options = $this->extensionConfiguration->get('clickio_consent');
+
+        $script = '' . print_r($options, true);
 
         if( ($options['tcf_stab_enabled']??'') == 1 ){
      		$script .= $templates['tcf'];
