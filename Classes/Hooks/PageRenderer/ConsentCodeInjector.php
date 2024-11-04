@@ -12,7 +12,7 @@ use TYPO3\CMS\Core\Site\Entity\Site;
 /**
  * @internal
  */
-final class TrackingCodeInjector
+final class ConsentCodeInjector
 {
     public function __construct(
         private readonly EventDispatcherInterface $eventDispatcher,
