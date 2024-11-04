@@ -7,3 +7,6 @@ services:
   Clickio\ClickioConsent\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+  Clickio\ClickioConsent\Hooks\PageRenderer\ConsentCodeInjector:
+    public: true
