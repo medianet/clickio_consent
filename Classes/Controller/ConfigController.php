@@ -43,7 +43,7 @@ class ConfigController extends ActionController
     public function indexAction(?array $newSettings = null): Response
     {
         if ($newSettings !== null) {
-            \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newSettings);
+//            \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newSettings);
         }
 
         if( $newSettings !== null){
