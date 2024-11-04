@@ -98,8 +98,6 @@ final class ConsentCodeInjector
             return;
         }
 
-        $path = plugin_dir_path( __FILE__ );
-
         $script = '';
         $options = $this->extensionConfiguration->get('clickio_consent');
 
@@ -112,11 +110,11 @@ final class ConsentCodeInjector
                   $options['wait'],
                   $options['redact']?'true':'false',
                   $options['passthrough']?'true':'false'
-             ], $templates[$options['scope']??'eu'] );
+             ], $templates[($options['scope']??'eu')] );
         }
 
         if( ($options['clickio_cmp_enabled']??'') == 1 && ($options['site_id']??0) > 0 ){
-           $script .= '<script src="//clickiocmp.com/t/consent_' . $options['site_id'] . '.js"></script>');
+           $script .= '<script src="//clickiocmp.com/t/consent_' . $options['site_id'] . '.js"></script>';
         }
  
         $pageRenderer->addHeaderData($script);
