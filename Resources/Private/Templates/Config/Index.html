@@ -1,12 +1,6 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-<!-- f:asset.script identifier="config" src="EXT:clickio_consent/Resources/Public/JavaScript/config.js" / -->
-    <h1>Настройки модуля</h1>
-
-
-   {options}
-
 <f:form action="index" method="POST" objectname="newSettings" object="{newSettings}">
 <p><label for="site_id">Clickio Site ID:</label> 
 <f:form.textfield id="site_id" name="newSettings[site_id]" value="{newSettings.site_id}" /><span onclick="hintShow('site_id')" class="dashicons dashicons-info-outline hi"></span></p>
